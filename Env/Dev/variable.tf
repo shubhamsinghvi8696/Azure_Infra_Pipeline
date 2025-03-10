@@ -1,0 +1,1 @@
+variable "Mod_RG_Infra" {}
