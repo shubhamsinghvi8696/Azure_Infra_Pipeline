@@ -11,7 +11,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev/'
     backendServiceArm: 'Azure_Git_Infra'
     backendAzureRmResourceGroupName: 'Shubham_Singhvi'
     backendAzureRmStorageAccountName: 'shubhamsinghvi8696'
