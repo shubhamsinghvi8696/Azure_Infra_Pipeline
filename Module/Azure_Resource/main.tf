@@ -5,3 +5,4 @@ resource "azurerm_resource_group" "resource_Practice" {
   tags       = each.value.tags
   managed_by = each.value.managed_by
 }
+  

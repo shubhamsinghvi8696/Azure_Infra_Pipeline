@@ -1,5 +1,0 @@
-pool: Self hosted Agent
-trigger: main
-stages:
-Job:
-task:
