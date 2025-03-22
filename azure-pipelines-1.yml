@@ -10,9 +10,9 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
+    workingDirectory: '$(System.DefaultWorkingDirectory)//Env/Dev/'
     backendServiceArm: 'Azure_Git_Infra'
     backendAzureRmResourceGroupName: 'Shubham_Singhvi'
-    backendAzureRmStorageAccountName: 'prashantstorage232'
-    backendAzureRmContainerName: 'test234'
-    backendAzureRmKey: 'terraform.tfvars'
+    backendAzureRmStorageAccountName: 'shubhamsinghvi8696'
+    backendAzureRmContainerName: 'infracontainer'
+    backendAzureRmKey: 'terraform.tfstate'
