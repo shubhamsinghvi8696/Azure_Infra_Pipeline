@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "azurerm" {
-    access_key           = " "
-    storage_account_name = " "
-    container_name       = " "
-    key                  = " "
+    resource_group_name   = "Shubham_Singhvi"
+    storage_account_name  = "shubhamsinghvi8696"
+    container_name        = "infracontainer"
+    key                   = "terraform.tfstate"
 }
 }
 
