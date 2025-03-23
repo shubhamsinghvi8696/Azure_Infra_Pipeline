@@ -2,9 +2,6 @@ trigger: none
 pool: Git_Azure_Infra
 
 steps:
-- task: TerraformInstaller@1
-  inputs:
-    terraformVersion: 'latest'
 
 - task: TerraformTaskV4@4
   inputs:
