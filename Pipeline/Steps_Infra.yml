@@ -1,7 +1,7 @@
 trigger: none
 pool: Git_Azure_Infra
 
-stages:
+steps:
 - task: TerraformTaskV4@4
   inputs:
     provider: 'azurerm'
