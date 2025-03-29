@@ -36,3 +36,37 @@ jobs:
       command: 'plan'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Envv/Dev'
       environmentServiceNameAzureRM: 'Azure_Git_Infra'
+
+- job: Validation
+  displayName: Manual Validation
+  dependsOn: Terraforminitplan
+  pool: server
+  steps:
+  - task: ManualValidation@1
+    inputs:
+      notifyUsers: 'Shubham Singhvi'
+      approvers: 'shubhamsinghvi8696@gmail.com'
+      instructions: 'Please Validate Plan'
+
+- job: terraformapply
+  displayName: Terraform Appy
+  dependsOn: Validation
+  steps:
+  
+  - task: TerraformTaskV4@4
+    inputs:
+      provider: 'azurerm'
+      command: 'init'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
+      commandOptions: '--update'
+      backendServiceArm: 'Azure_Git_Infra'
+      backendAzureRmResourceGroupName: 'Shubham_Singhvi'
+      backendAzureRmStorageAccountName: 'shubhamsinghvi8696'
+      backendAzureRmContainerName: 'infracontainer'
+      backendAzureRmKey: 'terraform.tfstate'
+  - task: TerraformTaskV4@4
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
+      environmentServiceNameAzureRM: 'Azure_Git_Infra'
