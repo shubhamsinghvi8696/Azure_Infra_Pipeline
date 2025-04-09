@@ -34,7 +34,7 @@ jobs:
     inputs:
       provider: 'azurerm'
       command: 'plan'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/Envv/Dev'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
       environmentServiceNameAzureRM: 'SK_Azure_Git_Infra'
 
 - job: Validation
