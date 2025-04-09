@@ -7,7 +7,7 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
-    backendServiceArm: 'Azure_Git_Infra'
+    backendServiceArm: 'SK_Azure_Git_Infra'
     backendAzureRmResourceGroupName: 'Shubham_Singhvi'
     backendAzureRmStorageAccountName: 'shubhamsinghvi8696'
     backendAzureRmContainerName: 'infracontainer'
@@ -18,4 +18,6 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
-    environmentServiceNameAzureRM: 'Azure_Git_Infra'
+    environmentServiceNameAzureRM: 'SK_Azure_Git_Infra'
+
+    
