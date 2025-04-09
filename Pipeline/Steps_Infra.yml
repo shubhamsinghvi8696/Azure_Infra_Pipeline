@@ -20,4 +20,11 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
     environmentServiceNameAzureRM: 'SK_Azure_Git_Infra'
 
-    
+
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
+    commandOptions: '--auto-approve'
+    environmentServiceNameAzureRM: 'SK_Azure_Git_Infra'
