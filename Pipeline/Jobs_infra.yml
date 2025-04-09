@@ -10,9 +10,9 @@ jobs:
       provider: 'azurerm'
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
-      backendServiceArm: 'Azure_Git_Infra'
+      backendServiceArm: 'SK_Azure_Git_Infra'
       backendAzureRmResourceGroupName: 'Shubham_Singhvi'
-      backendAzureRmStorageAccountName: 'shubhamsinghvi8696'
+      backendAzureRmStorageAccountName: 'shubhamsinghvi86967'
       backendAzureRmContainerName: 'infracontainer'
       backendAzureRmKey: 'terraform,tfstate'
 
@@ -24,9 +24,9 @@ jobs:
       provider: 'azurerm'
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
-      backendServiceArm: 'Azure_Git_Infra'
+      backendServiceArm: 'SK_Azure_Git_Infra'
       backendAzureRmResourceGroupName: 'Shubham_Singhvi'
-      backendAzureRmStorageAccountName: 'shubhamsinghvi8696'
+      backendAzureRmStorageAccountName: 'shubhamsinghvi86967'
       backendAzureRmContainerName: 'infracontainer'
       backendAzureRmKey: 'terraform,tfstate'
  
@@ -35,7 +35,7 @@ jobs:
       provider: 'azurerm'
       command: 'plan'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Envv/Dev'
-      environmentServiceNameAzureRM: 'Azure_Git_Infra'
+      environmentServiceNameAzureRM: 'SK_Azure_Git_Infra'
 
 - job: Validation
   displayName: Manual Validation
@@ -59,9 +59,9 @@ jobs:
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
       commandOptions: '--update'
-      backendServiceArm: 'Azure_Git_Infra'
+      backendServiceArm: 'SK_Azure_Git_Infra'
       backendAzureRmResourceGroupName: 'Shubham_Singhvi'
-      backendAzureRmStorageAccountName: 'shubhamsinghvi8696'
+      backendAzureRmStorageAccountName: 'shubhamsinghvi86967'
       backendAzureRmContainerName: 'infracontainer'
       backendAzureRmKey: 'terraform.tfstate'
   - task: TerraformTaskV4@4
@@ -69,4 +69,4 @@ jobs:
       provider: 'azurerm'
       command: 'apply'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
-      environmentServiceNameAzureRM: 'Azure_Git_Infra'
+      environmentServiceNameAzureRM: 'SK_Azure_Git_Infra'
