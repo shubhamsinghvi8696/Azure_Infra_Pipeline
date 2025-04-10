@@ -44,12 +44,11 @@ jobs:
   steps:
   - task: ManualValidation@1
     inputs:
-      notifyUsers: 'Shubham Singhvi'
-      approvers: 'shubhamsinghvi8696@gmail.com'
-      instructions: 'Please Validate Plan'
-
+        notifyUsers: 'shubham.singhvi@example.com'  # <- Use actual email or Azure DevOps user ID
+        instructions: 'Please review and approve the Terraform Plan.'
+        
 - job: terraformapply
-  displayName: Terraform Appy
+  displayName: Terraform Apply
   dependsOn: Validation
   steps:
   
