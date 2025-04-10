@@ -20,8 +20,9 @@ jobs:
   displayName: Terraform_Init & Plan
   steps:
   - task: TerraformTaskV4@4
+    displayName: Terraform_init
     inputs:
-      provider: 'azurerm'
+      provider: 'azurerm'      
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
       backendServiceArm: 'SK_Azure_Git_Infra'
@@ -31,6 +32,7 @@ jobs:
       backendAzureRmKey: 'terraform,tfstate'
  
   - task: TerraformTaskV4@4
+    displayName: Terraform_Plan
     inputs:
       provider: 'azurerm'
       command: 'plan'
@@ -53,6 +55,7 @@ jobs:
   steps:
   
   - task: TerraformTaskV4@4
+    displayName: Terraform_init
     inputs:
       provider: 'azurerm'
       command: 'init'
@@ -64,6 +67,7 @@ jobs:
       backendAzureRmContainerName: 'infracontainer'
       backendAzureRmKey: 'terraform.tfstate'
   - task: TerraformTaskV4@4
+    displayName: Terraform_Apply
     inputs:
       provider: 'azurerm'
       command: 'apply'
