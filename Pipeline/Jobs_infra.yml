@@ -57,7 +57,7 @@ jobs:
       provider: 'azurerm'
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Env/Dev'
-      commandOptions: '--update'
+      commandOptions: '--upgrade'
       backendServiceArm: 'SK_Azure_Git_Infra'
       backendAzureRmResourceGroupName: 'Shubham_Singhvi'
       backendAzureRmStorageAccountName: 'shubhamsinghvi86967'
